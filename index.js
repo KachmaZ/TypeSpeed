@@ -5,17 +5,15 @@ async function startGame(){
     setInterval(() => {
         timer++;
         speed = current / timer * 60;
-    $('.type-speed').html(speed.toFixed());
+    $('.speed').html(speed.toFixed());
     }, 1000)
     letters[current].classList.add('current');
     keyHighlighting(letters[current].textContent)
 }
 
 function keyHighlighting(currentKey){
-    console.log('"' + currentKey + '"');
     if (currentKey === ' ') {
         currentKey = 'Space';
-        console.log('Space')
     }
 
     for (let i = 0; i < supKeys.length; i++){        
@@ -48,11 +46,15 @@ $(document).on('keydown', (event) => {
         else {
             letters[current].classList.add('mistake');
         }
+        
         taps++;
         accuracy = current / taps * 100;
-        $('.type-accuracy').html(accuracy.toFixed(2));
+        $('.accuracy').html(`${accuracy.toFixed()}%`);
     }
 });
 
 
-$(".start").click(startGame);
+$(".start").click(() => {
+    $(".start").textContent = 'Restart';
+    startGame();
+});

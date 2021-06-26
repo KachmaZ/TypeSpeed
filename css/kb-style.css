@@ -1,5 +1,8 @@
+.keyboard-container {
+    text-align: center;
+}
 .sup-keyboard {
-    width: 60%;
+    display: inline-block;
     margin: 10px auto;
     padding: 15px;
     border-radius: 20px;
@@ -18,7 +21,6 @@
     width: 50px;
     height: 50px;
     margin: 5px;
-    padding: auto;
     border-radius: 5px;
 
     text-align: center;
@@ -28,7 +30,7 @@
     color: dimgray;
 }
 
-.sup-key, space {
+.space {
     width: 500px;
 }
 

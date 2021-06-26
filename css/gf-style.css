@@ -1,0 +1,63 @@
+.game-field {
+    width: 40%;
+    height: 200px;
+    border: 3px solid cornflowerblue;
+    border-radius: 30px;
+
+    margin: 20px auto;
+    padding: 10px;
+
+    background-color: honeydew;
+}
+
+.grid-wrapper {
+    display: grid;
+    height: 200px;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 5fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+        "field speed"
+        "field accuracy";
+}
+
+.type-field {
+    grid-area: field;
+}
+
+.type-accuracy {
+    grid-area: accuracy;
+
+    text-align: center;
+    margin: auto;
+    font-size: 20px;  
+}
+
+.type-accuracy span {
+    display: block;
+    font-size: 20px;
+}
+
+.type-speed {
+    grid-area: speed;
+
+    text-align: center;
+    margin: auto;
+    font-size: 20px;  
+}
+
+.type-speed span {
+    display: block;
+}
+
+.current {
+    background-color: yellow;
+}
+
+.passed {
+    background-color: green;
+}
+
+.mistake {
+    background-color: red;
+}
