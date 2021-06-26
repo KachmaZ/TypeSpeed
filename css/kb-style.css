@@ -1,0 +1,37 @@
+.sup-keyboard {
+    width: 60%;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 20px;
+
+    background-color:#232123;
+}
+
+.sup-keyrow {
+    display: flex;
+    justify-content: center;
+}
+
+.sup-key {
+    display: block;
+
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    padding: auto;
+    border-radius: 5px;
+
+    text-align: center;
+    font-size: 32px;    
+
+    background-color: #393839;
+    color: dimgray;
+}
+
+.sup-key, space {
+    width: 500px;
+}
+
+.highlighted {
+    color: orange;
+}
