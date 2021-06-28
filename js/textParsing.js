@@ -1,3 +1,6 @@
+
+// Запрос текста с сервиса 'Baconipsum'
+
 function getText() {
     return new Promise(function (resolve, reject){
         $.getJSON('https://baconipsum.com/api/?callback=?',

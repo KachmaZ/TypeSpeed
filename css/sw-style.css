@@ -1,14 +1,22 @@
-.start-window {
-    text-align: center;
-}
 
-.start {
+/* Стилизация стартовой кнопки */
+
+.start-button {
     width: 100px;
     height: 40px;
     border: 1px solid rgb(42, 68, 65);
     border-radius: 5px;
-    margin-bottom: 100px;
+    margin: auto;
+
+    text-align: center;
 
     background-color: teal;
+}
+
+.start-title {
+    width: auto;
+    margin: 10px auto;
+
+    font-size: 20px;
     color:powderblue;
 }
