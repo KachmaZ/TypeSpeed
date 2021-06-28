@@ -2,8 +2,7 @@
 /* Стилизация игрового поля */
 
 .game-field {
-    width: 40%;
-    height: 200px;
+    width: 750px;
     border: 3px solid cornflowerblue;
     border-radius: 30px;
 
@@ -15,17 +14,23 @@
 
 .grid-wrapper {
     display: grid;
-    height: 200px;
+
+    min-height: 160px;
     grid-template-rows: 1fr 1fr ;
     grid-template-columns: 5fr 1fr;
-    gap: 20px;
     grid-template-areas:
         "field speed"
         "field accuracy";
+        gap: 20px;
 }
 
 .type-field {
     grid-area: field;
+
+    border: 3px dashed orange;
+    border-radius: 20px;
+    
+    padding: 5px;
 }
 
 .type-accuracy {
@@ -54,7 +59,7 @@
 }
 
 .current {
-    background-color: yellow;
+    background-color: gold;
 }
 
 .passed {

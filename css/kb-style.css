@@ -6,6 +6,7 @@
 }
 .sup-keyboard {
     display: inline-block;
+    width: 750px;
     margin: 10px auto;
     padding: 15px;
     border-radius: 20px;
