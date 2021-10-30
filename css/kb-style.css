@@ -31,13 +31,22 @@
     font-size: 32px;    
 
     background-color: #393839;
-    color: dimgray;
 }
 
 .space {
     width: 500px;
 }
 
-.highlighted {
+.unactive {
+    color: dimgray;
+}
+
+.current-highlighted {
     color: orange;
+    transition-duration: 0s;
+}
+
+.mistake-highlighted {
+    color: red;
+    transition-duration: 0s;
 }

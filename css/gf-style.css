@@ -13,7 +13,7 @@
 }
 
 /* Элементы поля расположены 
-   по технологии сетки (grid) */
+   по технологии сетки (grid)*/
 
 .grid-wrapper {
     display: grid;
@@ -29,6 +29,8 @@
 
 .type-field {
     grid-area: field;
+
+    font-size: 20px;
 
     border: 3px dashed orange;
     border-radius: 20px;
