@@ -12,6 +12,9 @@
     background-color: honeydew;
 }
 
+/* Элементы поля расположены 
+   по технологии сетки (grid) */
+
 .grid-wrapper {
     display: grid;
 
@@ -38,7 +41,7 @@
 
     text-align: center;
     margin: auto;
-    font-size: 20px;  
+    font-size: 20px;
 }
 
 .type-accuracy span {
