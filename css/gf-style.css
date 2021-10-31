@@ -31,6 +31,8 @@
     grid-area: field;
 
     font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
 
     border: 3px dashed orange;
     border-radius: 20px;

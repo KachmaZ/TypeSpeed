@@ -10,6 +10,7 @@ function keyPermanentHighlighting(pressedKey){
     }
     for (let i = 0; i < supKeys.length; i++){        
         if(supKeys[i].textContent === pressedKey.toLowerCase()){
+            supKeys[i].classList.remove('mistake-highlighted')
             supKeys[i].classList.add('current-highlighted');
             break;
         }
@@ -31,7 +32,7 @@ function keyPulseHighliting(pressedKey) {
     }
 }
 
-// Очищение подсветки
+// Очищение подсветки выбранной клавиши
 function clearKeyHighlighting(clearingKey){
     if (clearingKey === ' ') {
         clearingKey = 'Space'
@@ -44,6 +45,7 @@ function clearKeyHighlighting(clearingKey){
     }
 }
 
+// Очищение подсветки всех клавиш
 function clearAllHighlighting() {
     for (let i = 0; i < supKeys.length; i++) {
         supKeys[i].classList.remove('current-highlighted', 'mistake-highlighted');
