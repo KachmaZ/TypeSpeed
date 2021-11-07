@@ -2,7 +2,7 @@
 /* Общая стилизация страницы страницы */
 
 body {
-    background-image: url('images/darkforest.jpg');
+    background-image: url('images/greybg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
