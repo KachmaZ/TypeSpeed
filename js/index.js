@@ -2,7 +2,7 @@ let startButton = $('.start-button');
 
 // Привязка основной функции к кнопке "Старт"
 startButton.click(() => {
-    $('.start-title').html('Restart');
+    $('.start-title').html('Restart'); // Смена надписи на кнопке
     start();
 });
 
