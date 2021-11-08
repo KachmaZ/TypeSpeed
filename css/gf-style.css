@@ -1,8 +1,14 @@
 
 /* Стилизация игрового поля */
 
+* {
+    box-sizing: border-box;
+}
+
 .game-field {
     width: 750px;
+    min-height: 250px;
+    height: 1px; /* Это чтобы дочерний блок мог занять всю высоту родителя*/
     border: 3px solid cornflowerblue;
     border-radius: 30px;
 
@@ -13,38 +19,81 @@
 }
 
 /* Элементы поля расположены 
-   по технологии сетки (grid)*/
+   по технологии flexbox*/
 
-.grid-wrapper {
+.flex-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.type-field {
+    width: 82%;
+    height: 100%;
+    padding: 5px;
+    
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+    border: 3px dashed orange;
+    border-radius: 20px;    
+}
+
+.prepared {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indicators {
+    width: 18%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* Стилизация стартовой кнопки */
+
+.start-button {
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgb(42, 68, 65);
+    border-radius: 5px;
+
+    text-align: center;
+
+    background-color: teal;
+}
+
+.start-title {
+    width: auto;
+    margin: 10px auto;
+
+    font-size: 20px;
+    color:powderblue;
+}
+
+/* .grid-wrapper {
     display: grid;
 
-    min-height: 160px;
+    min-height: 200px;
     grid-template-rows: 1fr 1fr ;
     grid-template-columns: 5fr 1fr;
     grid-template-areas:
         "field speed"
         "field accuracy";
         gap: 20px;
-}
+} */
 
-.type-field {
-    grid-area: field;
-
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-
-    border: 3px dashed orange;
-    border-radius: 20px;
-    
-    padding: 5px;
-}
 
 .type-accuracy {
-    grid-area: accuracy;
+    height: 30%;
 
     text-align: center;
-    margin: auto;
     font-size: 20px;
 }
 
@@ -54,10 +103,8 @@
 }
 
 .type-speed {
-    grid-area: speed;
-
+    height: 30%;
     text-align: center;
-    margin: auto;
     font-size: 20px;  
 }
 

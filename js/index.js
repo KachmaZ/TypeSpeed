@@ -1,8 +1,17 @@
 let startButton = $('.start-button');
 
 // Привязка основной функции к кнопке "Старт"
-startButton.click(() => {
-    $('.start-title').html('Restart'); // Смена надписи на кнопке
+$('.start-button').click(() => {
+    $('.start-button').remove();
+    $('.type-field').removeClass('prepared');
+
+    $('.indicators').append(startButton);
+
+    $('.start-title').html('Restart');
+    $('.start-button').click(() => {
+        start();
+    })
+
     start();
 });
 
@@ -54,6 +63,10 @@ async function start(){
                 clearKeyHighlighting(event.key);
 
                 current++;
+
+                if (current === letters.length) {
+                    finish();
+                }
 
                 keyPermanentHighlighting(letters[current].textContent);
                 letters[current].classList.add('current');
